@@ -28,7 +28,7 @@ public class PrintQueue {
 
 		try {
 			Long duration = (long) (Math.random() * 10000);
-			System.out.printf("%s: PrintQueue: Printing a Job during %d seconds\n", Thread.currentThread().getName(), (duration / 1000));
+			System.out.printf("%s: 上半场 PrintQueue: Printing a Job during %d seconds\n", Thread.currentThread().getName(), (duration / 1000));
 			Thread.sleep(duration);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -39,7 +39,7 @@ public class PrintQueue {
 		queueLock.lock();
 		try {
 			Long duration = (long) (Math.random() * 10000);
-			System.out.printf("%s: PrintQueue: Printing a Job during %d seconds\n", Thread.currentThread().getName(), (duration / 1000));
+			System.out.printf("%s: 下半场 PrintQueue: Printing a Job during %d seconds\n", Thread.currentThread().getName(), (duration / 1000));
 			Thread.sleep(duration);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
